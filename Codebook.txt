@@ -1,0 +1,18 @@
+GETTING AND CLEANING DATA PROJECT CODEBOOK
+
+ANALYSIS STEPS
+
+1. We Download the File from the source and unzip the dataset
+2. We then Prepare the labels for the columns , by loading data from features.txt and clean 
+   them ( remove invalid characters such as '()' and duplicate phrase 'BodyBody is replace by 'Body' )
+3. We also prepare the activity labels   by loading data from activity_labels.txt 
+4. The next step is extracting only the measurements on the mean and standard deviation 
+   from the train and test dataset  and add the activities and subject column to each data frame.
+5. Merge the train and test dataset into one data frame
+6. Use The melt and dcast function from the reshape2 library to group the data by subject and activity 
+   and calculate the mean for each measurement columns
+7. The last step is write the result dataset onto a text file , named tidy_data.txt
+
+For more details, please check the run_analysis.R script 
+
+
